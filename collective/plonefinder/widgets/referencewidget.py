@@ -56,7 +56,7 @@ class FinderSelectWidget(OrderedMultiSelectWidget):
         reference_tool = getToolByName(self.base, 'reference_catalog')
         pm = getToolByName(self.base, 'portal_membership')
         # the value could be
-        # uid or uid/image_thumb or uid/view or uid/download ....
+        # uid or uid/@@images/image/thumb or uid/view or uid/download ....
         uid = value.split('/')[0]
         obj = reference_tool.lookupObject(uid)
         if obj is not None:

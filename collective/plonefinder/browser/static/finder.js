@@ -369,7 +369,7 @@ Browser.setView = function(typeview) {
             .changeClass('landscape','landscape_icon');
         jQuery('#plone-browser-body img').each (function() {
             src = this.src;
-            this.src = src.replace(/\/image_thumb/gi, '/image_listing');
+            this.src = src.replace(/\/image\/thumb/gi, '/image/listing');
             if (jQuery.browser.msie) {
                 oldstyle = jQuery(this).attr('style');
                 jQuery(this).attr('style', oldstyle.replace(/px !important/gi, 'px'));
@@ -384,7 +384,7 @@ Browser.setView = function(typeview) {
             .changeClass('landscape_icon', 'landscape');
         jQuery('#plone-browser-body img').each (function() {
             src = this.src;
-            this.src = src.replace(/\/image_listing/gi, '/image_thumb');
+            this.src = src.replace(/\/image\/listing/gi, '/image/thumb');
             if (jQuery.browser.msie) {
                 oldstyle = jQuery(this).attr('style');
                 jQuery(this).attr('style', oldstyle.replace(/px/gi, 'px !important'));
